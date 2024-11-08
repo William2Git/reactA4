@@ -6,20 +6,22 @@ function Ambiguous() {
     const [a, setA] = useState(0);
     const [b, setB] = useState(0);
     const [c, setC] = useState(0);
-    const [area, setArea] = useState(0);
-
-    function amb() {
+    const [area,setArea]= useState(0);
+    
+    function heronFormula() {
         //the side values entered must be positive
         if (a > 0 && b > 0 && c > 0) {
             const radicand = 4 * a * a * b * b - Math.pow(a * a + b * b - c * c, 2);
             //if the number inside the radical is negative or 0, then there is no triangle
+    
             if (radicand > 0) {
-                setArea(Math.round(100 * Math.sqrt(radicand) / 4) / 100);
+                return setArea( Math.round(100 * Math.sqrt(radicand) / 4) / 100);
             }
         }
-        setArea("This triangle does not exist.");
+        return setArea( "This triangle does not exist.");
+    
     }
-
+    console.log(a);
     return (
         <div>
             <h1>Heron's Formula</h1>
@@ -31,12 +33,12 @@ function Ambiguous() {
             <input type="number" value={c} onChange={(event) => setC(event.target.value)}></input>
             <label>Area of the Triangle</label>
             <input type="text" readOnly value={area}></input>
-            <button id="heron" style="cursor:pointer" >Calculate</button>
+            <button onClick={()=>heronFormula()}>Calculate</button>
 
 
         </div>
     )
-
+    
 }
 
 export default Ambiguous;
