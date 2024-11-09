@@ -1,14 +1,17 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-import Ambiguous from './calculations/Ambiguous';
+import Heron from './calculations/Heron';
+import Ambiguous from "./calculations/Ambiguous";
+import Newton from "./calculations/Newton";
+import Polynomial from "./calculations/Polynomial";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <Ambiguous />
+    <div className="container">
+      <Heron/>
+      <Ambiguous/>
+      <Newton/>
+      <Polynomial/>
+    </div>
   )
 }
 
