@@ -44,17 +44,19 @@ function Ambiguous() {
     }
 
     return (
-        <div>
+        <div className ="amb">
             <h1>Ambiguous Case</h1>
-            <label>Angle A (Enter in Degrees)</label>
-            <input type="number" value={angleA} onChange={(event) => setAngle(event.target.value)}></input>
-            <label>Side a</label>
-            <input type="number" value={a} onChange={(event) => setA(event.target.value)}></input>
-            <label>Side b</label>
-            <input type="number" value={b} onChange={(event) => setB(event.target.value)}></input>
-            <label>Triangle Type</label>
-            <input type="text" readOnly style={{ cursor: 'no-drop' }} value={type}></input>
-            <button onClick={() => ambiguousCase()} style={{cursor:'pointer'}}>Calculate</button>
+            <div id="contents">
+                <label>Angle A (Enter in Degrees)</label>
+                <input type="number" value={angleA} onChange={(event) => setAngle(event.target.value)}></input>
+                <label>Side a</label>
+                <input type="number" value={a} onChange={(event) => setA(event.target.value)}></input>
+                <label>Side b</label>
+                <input type="number" value={b} onChange={(event) => setB(event.target.value)}></input>
+                <label>Triangle Type</label>
+                <input type="text" readOnly style={{ cursor: 'no-drop' }} value={type}></input>
+            </div>
+            <button onClick={() => ambiguousCase()} style={{ cursor: 'pointer' }}>Calculate</button>
         </div>
     );
 }

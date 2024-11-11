@@ -1,8 +1,4 @@
-body{
-    width:80%;
-    display: grid;
-    margin:20px;
-    grid-template-columns: 20% 80%;
-    row-gap:20px;
-    column-gap:0;
+.amb{
+    border: 1px solid black;
+    position:relative;
 }

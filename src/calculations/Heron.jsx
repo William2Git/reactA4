@@ -6,35 +6,37 @@ function Heron() {
     const [a, setA] = useState(0);
     const [b, setB] = useState(0);
     const [c, setC] = useState(0);
-    const [area,setArea]= useState(0);
-    
+    const [area, setArea] = useState(0);
+
     function heronFormula() {
         //the side values entered must be positive
         if (a > 0 && b > 0 && c > 0) {
             const radicand = 4 * a * a * b * b - Math.pow(a * a + b * b - c * c, 2);
             //if the number inside the radical is negative or 0, then there is no triangle
             if (radicand > 0) {
-                return setArea( Math.round(100 * Math.sqrt(radicand) / 4) / 100);
+                return setArea(Math.round(100 * Math.sqrt(radicand) / 4) / 100);
             }
         }
-        return setArea( "This triangle does not exist.");
+        return setArea("This triangle does not exist.");
     }
 
     return (
-        <div>
+        <div className="heron">
             <h1>Heron's Formula</h1>
-            <label>Side a</label>
-            <input type="number" value={a} onChange={(event) => setA(event.target.value)}></input>
-            <label>Side b</label>
-            <input type="number" value={b} onChange={(event) => setB(event.target.value)}></input>
-            <label>Side c</label>
-            <input type="number" value={c} onChange={(event) => setC(event.target.value)}></input>
-            <label>Area of the Triangle</label>
-            <input type="text" readOnly value={area} style= {{cursor:'no-drop'}}></input>
-            <button onClick={()=>heronFormula()} style={{cursor:'pointer'}}>Calculate</button>
+            <div id="contents">
+                <label>Side a</label>
+                <input type="number" value={a} onChange={(event) => setA(event.target.value)}></input>
+                <label>Side b</label>
+                <input type="number" value={b} onChange={(event) => setB(event.target.value)}></input>
+                <label>Side c</label>
+                <input type="number" value={c} onChange={(event) => setC(event.target.value)}></input>
+                <label>Area of the Triangle</label>
+                <input type="text" readOnly value={area} style={{ cursor: 'no-drop' }}></input>
+            </div>
+            <button onClick={() => heronFormula()} style={{ cursor: 'pointer' }}>Calculate</button>
         </div>
     )
-    
+
 }
 
 export default Heron;
