@@ -11,6 +11,7 @@ function App() {
       <Ambiguous/>
       <Newton/>
       <Polynomial/>
+      <br></br>
     </div>
   )
 }

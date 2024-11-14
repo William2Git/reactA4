@@ -1,4 +1,37 @@
 .heron {
     border: 1px solid black;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     position: relative;
+    width:500px;
+    height:450px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#contents {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 20% 80%;
+    row-gap: 20px;
+    column-gap: 0;
+}
+
+label {
+    text-align: center;
+}
+
+input {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+}
+
+button {
+    position: absolute;
+    width: 79%;
+    left: 10.5%;
+    height: 30px;
 }
