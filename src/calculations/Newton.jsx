@@ -7,21 +7,20 @@ function Newton() {
 
     function newtonMethod() {
         root = guess;
-        console.log(guess);
-
         do {
             guess = root;
             let original = 6 * Math.pow(guess, 4) - 13 * Math.pow(guess, 3) - 18 * Math.pow(guess, 2) + 7 * guess + 6;
             let derivative = 24 * Math.pow(guess, 3) - 39 * Math.pow(guess, 2) - 36 * guess + 7;
 
             root = guess - original / derivative;
-        } while (Math.abs(guess - root) > 0.0001)
+        }
+        while (Math.abs(guess - root) > 0.0001)
 
         return setRoot(Math.round(root * 10000) / 10000);
     }
 
     return (
-        <div className ="newton">
+        <div className="newton">
             <h1>Newton's Method</h1>
             <div id="contents">
                 <label>Root Guess</label>
@@ -29,7 +28,6 @@ function Newton() {
                 <label>Root Approximation</label>
                 <input type="text" readOnly style={{ cursor: "no-drop" }} value={root}></input>
             </div>
-
             <button onClick={() => newtonMethod()} style={{ cursor: 'pointer' }}>Calculate</button>
         </div>
     );

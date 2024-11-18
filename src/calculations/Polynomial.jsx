@@ -19,7 +19,6 @@ function Polynomial() {
         let coeffExpo = [];
         let constant = 0;
         let answer = ["f(x) = ", 0];
-
         //sorts the exponents so they are organized from highest power to lowest power
         for (let i = 0; i < expo.length; i++) {
             coeffExpo[i] = [];
@@ -41,7 +40,6 @@ function Polynomial() {
             if (coeffExpo[i][1] == 0) {
                 continue;
             }
-
             //if coefficient is positive, put a plus sign
             if (i > 0 && coeffExpo[i][1] > 0) {
                 answer[0] += "+";
@@ -60,7 +58,7 @@ function Polynomial() {
     }
 
     return (
-        <div className ="polynomial">
+        <div className="polynomial">
             <h1>Polynomial Function</h1>
             <div id="contents">
                 <label>Coefficients</label>

@@ -17,6 +17,7 @@ function Heron() {
                 return setArea(Math.round(100 * Math.sqrt(radicand) / 4) / 100);
             }
         }
+        
         return setArea("This triangle does not exist.");
     }
 
@@ -36,7 +37,6 @@ function Heron() {
             <button onClick={() => heronFormula()} style={{ cursor: 'pointer' }}>Calculate</button>
         </div>
     )
-
 }
 
 export default Heron;

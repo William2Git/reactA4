@@ -9,7 +9,7 @@ function Ambiguous() {
 
     function ambiguousCase() {
         const angle = Math.PI * angleA / 180;
-        //both a and b are strings and must be converted to a float so the numbers can accurate be compared
+        //both a and b are strings and must be converted to a float so the numbers can accurately be compared
         a = parseFloat(a);
         b = parseFloat(b);
         const h = Math.round(1000 * b * Math.sin(angle)) / 1000;
@@ -40,11 +40,10 @@ function Ambiguous() {
                 return setType("No triangles exist");
             }
         }
-
     }
 
     return (
-        <div className ="amb">
+        <div className="amb">
             <h1>Ambiguous Case</h1>
             <div id="contents">
                 <label>Angle A (Enter in Degrees)</label>
